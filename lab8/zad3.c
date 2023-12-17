@@ -23,18 +23,20 @@ int main(int argc, char* argv[]){
         arr[i] = rand() % 100;
     }
     
-    int i = 0;
-    while (i <= n) {
-        int element = arr[i];
-        int k = i - 1;
-
-        while ((k >= 0) && (arr[k] > element)) {
-            arr[k + 1] = arr[k];
-            k = k - 1;
+    int i = n;
+    while (i != 0) {
+        int j = 0;
+        while (j < i) {
+            if (arr[j + 1] < arr[j]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+            j += 1;
         }
-        arr[k + 1] = element;
-        i += 1;
+        i -= 1;        
     }
+   
     
     for (int i = 0; i <= n; i++) {
         printf("index: %d, value: %d\n", i, arr[i]);
