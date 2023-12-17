@@ -24,22 +24,22 @@ int main(int argc, char *argv[])
 
 
     gettimeofday(&start, NULL);
-    system("./zad1 49 123");
+    system("./zad1 49 123 > /dev/null");
     gettimeofday(&stop, NULL);
     printf("Zad1 ended in: %ld milis\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec);
 
     gettimeofday(&start, NULL);
-    system("./zad2 14 20");
+    system("./zad2 14 20 > /dev/null");
     gettimeofday(&stop, NULL);
     printf("Zad2 ended in: %ld milis\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec);
 
     gettimeofday(&start, NULL);
-    system("./zad3 27");
+    system("./zad3 27 > /dev/null");
     gettimeofday(&stop, NULL);
     printf("Zad3 ended in: %ld milis\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec);
 
     gettimeofday(&start, NULL);
-    system("./zad4 ");
+    system("./zad4 > /dev/null");
     gettimeofday(&stop, NULL);
     printf("Zad4 ended in: %ld milis\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec);
 
