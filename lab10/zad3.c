@@ -36,12 +36,19 @@ int main(int argc, char* argv[]){
     fseek(filePointer, 0L, SEEK_END); 
     int size = ftell(filePointer); rewind(filePointer);
     
-    char fileContent[size];    
+    char fileContent[size];
+    int i = 0;
     while (fgets(fileContent, size, filePointer))
     {
+        for (int j = 0; j < fileContent; j++)
+        {
+            /* code */
+        }
+        
         printf("%s", fileContent);
     }
-
+    
+    
     fclose(filePointer);
     
     return 0;
