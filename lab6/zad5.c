@@ -2,11 +2,16 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int calcImpl(int n, int result) {
-   if (n % 2 == 0) {  }
+char* calcImpl(int n, int c) {
+    char* result = "";
+
+    if (n % 2 == 0) { result[c] = '0'; calcImpl(n/2, ++c); }
+    else { result[c] = '1'; calcImpl(n/2, ++c); }
+
+    return result;
 }
 
-int calc(int n) {
+char* calc(int n) {
     return calcImpl(n, 0);
 }
 
